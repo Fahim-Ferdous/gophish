@@ -10,14 +10,15 @@ import (
 
 // Template models hold the attributes for an email template to be sent to targets
 type Template struct {
-	Id           int64        `json:"id" gorm:"column:id; primary_key:yes"`
-	UserId       int64        `json:"-" gorm:"column:user_id"`
-	Name         string       `json:"name"`
-	Subject      string       `json:"subject"`
-	Text         string       `json:"text"`
-	HTML         string       `json:"html" gorm:"column:html"`
-	ModifiedDate time.Time    `json:"modified_date"`
-	Attachments  []Attachment `json:"attachments"`
+	Id             int64        `json:"id" gorm:"column:id; primary_key:yes"`
+	UserId         int64        `json:"-" gorm:"column:user_id"`
+	OrganizationID int16        `json:"-" gorm:"column:org_id"`
+	Name           string       `json:"name"`
+	Subject        string       `json:"subject"`
+	Text           string       `json:"text"`
+	HTML           string       `json:"html" gorm:"column:html"`
+	ModifiedDate   time.Time    `json:"modified_date"`
+	Attachments    []Attachment `json:"attachments"`
 }
 
 // ErrTemplateNameNotSpecified is thrown when a template name is not specified

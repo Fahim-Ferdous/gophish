@@ -8,11 +8,12 @@ import (
 
 // Webhook represents the webhook model
 type Webhook struct {
-	Id       int64  `json:"id" gorm:"column:id; primary_key:yes"`
-	Name     string `json:"name"`
-	URL      string `json:"url"`
-	Secret   string `json:"secret"`
-	IsActive bool   `json:"is_active"`
+	Id             int64  `json:"id" gorm:"column:id; primary_key:yes"`
+	OrganizationID int16  `json:"-" gorm:"column:org_id"`
+	Name           string `json:"name"`
+	URL            string `json:"url"`
+	Secret         string `json:"secret"`
+	IsActive       bool   `json:"is_active"`
 }
 
 // ErrURLNotSpecified indicates there was no URL specified

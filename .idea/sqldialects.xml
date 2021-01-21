@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/db/db_mysql/migrations/20160118194630_init.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/db/db_sqlite3/migrations/20201201000000_0.11.0_account_locked.sql" dialect="GenericSQL" />
+    <file url="PROJECT" dialect="SQLite" />
+  </component>
+</project>

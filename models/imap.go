@@ -15,6 +15,7 @@ const DefaultIMAPFreq = 60 // Every 60 seconds
 // for reported emails
 type IMAP struct {
 	UserId                      int64     `json:"-" gorm:"column:user_id"`
+	OrganizationID              int16     `json:"-" gorm:"column:org_id"`
 	Enabled                     bool      `json:"enabled"`
 	Host                        string    `json:"host"`
 	Port                        uint16    `json:"port,string,omitempty"`

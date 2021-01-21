@@ -13,6 +13,7 @@ import (
 type Page struct {
 	Id                 int64     `json:"id" gorm:"column:id; primary_key:yes"`
 	UserId             int64     `json:"-" gorm:"column:user_id"`
+	OrganizationID     int16     `json:"-" gorm:"column:org_id"`
 	Name               string    `json:"name"`
 	HTML               string    `json:"html" gorm:"column:html"`
 	CaptureCredentials bool      `json:"capture_credentials" gorm:"column:capture_credentials"`
